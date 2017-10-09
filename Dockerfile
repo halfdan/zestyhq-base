@@ -1,22 +1,17 @@
-# Select Ubuntu as the base image
-FROM ubuntu:14.04
+# Select heroku-16 as base image
+FROM heroku/heroku:16
 ARG ruby_version=2.3.5
 
 MAINTAINER Zesty
 
 # Update Apt
 RUN apt-get -y update
-RUN apt-get -y install curl git-core python-software-properties
 
 # Install essentials
-RUN apt-get -y install build-essential
-RUN apt-get install -y -q git
+RUN apt-get install -y build-essential
 RUN apt-get install -y libssl-dev
 RUN apt-get install -y libreadline-dev
 RUN apt-get install -y libpq-dev
-RUN apt-get install -y postgresql-client
-RUN apt-get install -y libfontconfig
-RUN apt-get install -y libxrender1
 
 # Install phantomjs
 RUN curl --output /tmp/phantomjs https://s3.amazonaws.com/circle-downloads/phantomjs-2.1.1

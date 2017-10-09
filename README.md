@@ -1,10 +1,10 @@
 # zestyhq-base
 
-This Dockerfile builds the base image for CircleCI 2.0 builds used at Zesty. It's based on Ubuntu 14.04.
+This Dockerfile builds the base image for CircleCI 2.0 builds used at Zesty. It's based on heroku/heroku:16.
 
 ## What's included?
 
-- Ubuntu 14.04
+- heroku-16 base image
 - rbenv
 - Ruby 2.3.5
 - Build essentials
